@@ -1,2 +1,2 @@
-# project1
-this is the first project of my interaction design class
+# Project1
+This is the Project 1 of my Interaction Design class
