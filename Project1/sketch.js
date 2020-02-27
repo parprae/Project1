@@ -17,7 +17,7 @@ var statePanda = 5;
 var stateCamel = 6;
 var statePorcupine = 7;
 var statePenguin = 8;
-var animalList = [1,2,3,/*4*/,5,/*6*/,7,/*8*/];
+var animalList = [1,2,3,4,5,6,7,8];
 let imgStatic;
 let imgElephant;
 let imgPolarBear;
@@ -41,11 +41,11 @@ function preload() {
   imgElephant = loadImage('assets/elephant.png');
   imgPolarBear = loadImage('assets/polarbear.png');
   imgKoala = loadImage('assets/koala.png');
-  /*imgRaccoon = loadImage('assets/image4.jpg');*/
+  imgRaccoon = loadImage('assets/raccoon.png');
   imgPanda = loadImage('assets/panda.png');
-  /*imgCamel = loadImage('assets/image6.jpg');*/
+  imgCamel = loadImage('assets/camel.png');
   imgPorcupine = loadImage ('assets/porcupine.png');
-  /*imgPorcupine = loadImage('assets/porcupine.jpg');*/
+  imgPenguin = loadImage('assets/penguin.png');
   tokyoFont = loadFont('assets/TokyoRegular.otf');
   latoFont = loadFont('assets/Lato-Regular.ttf');
   pandaSound = loadSound('assets/panda.wav');
@@ -105,7 +105,7 @@ function drawLandingPage() {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Press space bar to learn more\nand click on the face to listen to its sound', 450, 500);
+  text('Press space bar to learn about animals\nand click on the face to listen to its sound', 450, 500);
 }
 
 function drawElephant() {
@@ -120,14 +120,12 @@ function drawElephant() {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Habitat: India and Southeast Asia\n\nLifespan: 48 years\n\nColor: Gray', 450, 200);
+  text('Habitat: India and Southeast Asia\n\nLifespan: 48 years\n\nColor: Gray\n\nFood: Grasses, leaves, roots, and bushes', 450, 150);
 }
 
 function drawPolarBear() {
-  background(207, 255, 212);
+  background(189, 253, 255);
   image(imgPolarBear, 230, 330, 450, 464);
-
-  /*rect(100,230,130,100);*/
 
   fill(0);
   textSize(32);
@@ -137,7 +135,7 @@ function drawPolarBear() {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Habitat: The Arctic\n\nLifespan: 20-30 years\n\nColor: White', 450, 200);
+  text('Habitat: The Arctic\n\nLifespan: 20-30 years\n\nColor: White\n\nFood: Seals', 450, 150);
 }
 
 function drawKoala() {
@@ -154,16 +152,22 @@ function drawKoala() {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Habitat: Australia\n\nLifespan: 13-18 years\n\nColor: Brown', 450, 200);
+  text('Habitat: Australia\n\nLifespan: 13-18 years\n\nColor: Brown\n\nFood: Eucalyptus leaves', 450, 150);
 }
 
 function drawRaccoon () {
   background(221, 255, 199);
+  image(imgRaccoon, 240, 400, 480, 308);
 
   fill(0);
   textSize(32);
   textFont(tokyoFont);
   text('RACCOON', 420, 50);
+
+  fill(0);
+  textSize(15);
+  textFont(latoFont);
+  text('Habitat: Forests\n\nLifespan: 2-3 years\n\nColor: Brown\n\nFood: Berries, fruits, nuts, grains, and vegetables', 450, 150);
 }
 
 function drawPanda () {
@@ -178,16 +182,22 @@ function drawPanda () {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Habitat: China\n\nLifespan: 20 years\n\nColor: Black and White', 450, 200);
+  text('Habitat: China\n\nLifespan: 20 years\n\nColor: Black and White\n\nFood: Bamboo', 450, 150);
 }
 
 function drawCamel () {
   background(255, 221, 186);
+  image(imgCamel, 250, 300, 480, 547);
 
   fill(0);
   textSize(32);
   textFont(tokyoFont);
   text('camel', 420, 50);
+
+  fill(0);
+  textSize(15);
+  textFont(latoFont);
+  text('Habitat: Deserts\n\nLifespan: 40 years\n\nColor: Light brown\n\nFood:  Grass, grains, wheat, and oats', 450, 150);
 }
 
 function drawPorcupine () {
@@ -202,11 +212,12 @@ function drawPorcupine () {
   fill(0);
   textSize(15);
   textFont(latoFont);
-  text('Habitat: Asia, Southern Europe, \nAfrica, and North and South America\n\nLifespan: 5-6 years\n\nColor: Brown, Gray, and White', 450, 200);
+  text('Habitat: Asia, Southern Europe, \nAfrica, and North and South America\n\nLifespan: 5-6 years\n\nColor: Brown, Gray, and White\n\nFood: Nuts, seeds, fruits, and leaves', 450, 150);
 }
 
 function drawPenguin () {
   background(189, 253, 255);
+  image(imgPenguin, 200, 350, 550, 413);
 
   fill(0);
   textSize(32);
@@ -273,6 +284,9 @@ porcupineHeight = 200;
 function drawRects() {
   noFill();
   noStroke();
+
+  /*stroke(0);
+  rect(koalaLeft, koalaTop, koalaWidth, koalaHeight);*/
 }
 
 function mousePressed() {
